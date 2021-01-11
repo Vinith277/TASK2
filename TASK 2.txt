@@ -1,0 +1,31 @@
+TASK 2:
+
+
+Difference between copy by value and copy by reference, Copy by value a composite datatype 
+
+	Copy by value:
+		In a primitive data-type when a variable is assigned a value, 
+		for example,
+			var x = 10;
+			var y = 'abc';
+			var a = x;
+			var b = y;
+			x = 5;
+			y = 'def';
+			console.log(x,y,a,b); -> 5,'def',10,'abc'
+			
+		'x' and 'y' variable are copied and stored into another variable as 'a' and 'b',At this point of time both ‘x’ and ‘a’ contains the value 10. Both ‘y’ and ‘b’ contains the value ‘abc’. However, here is that even though ‘x’ and ‘a’ as well as ‘y’ and ‘b’ contains the same value they are not connected to each other. It is so because the values are directly copied into the new variables.
+		Changes taking place in one does not affect the other, then finally the variables are independent of each other.
+			
+	Copy by reference:
+		In case of a non-primitive data-type the values are not directly copied.
+		for example,
+			let user = { name : 'Vini' };
+			let admin = user;
+			admin.name = 'Vijay';  //value changed
+			console.log(user.name);  //here name changed to Vijay 
+		
+		when the value of admin is changed it automatically changes the value of user as well.
+		This happens because both ‘user’ and ‘admin’ are storing the address of the memory location. And when one changes the values in the allocated memory it is reflected in the other as well.
+		
+		
